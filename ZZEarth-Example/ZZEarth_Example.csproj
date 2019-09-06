@@ -30,17 +30,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Data.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Utils.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\ZZEarth\DevExpress.Utils.v12.2.dll</HintPath>
+      <HintPath>C:\Program Files\ZZEarth\DevExpress.Data.v18.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraBars.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\ZZEarth\DevExpress.XtraBars.v12.2.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>C:\Program Files\ZZEarth\DevExpress.Utils.v18.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraEditors.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\ZZEarth\DevExpress.XtraBars.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\ZZEarth\DevExpress.XtraEditors.v18.1.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms" />
@@ -49,20 +54,24 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Zf3DPlatform.osgEarthGUI">
-      <HintPath>C:\Program Files\ZZEarth\Zf3DPlatform.osgEarthGUI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="ZFGK">
       <HintPath>C:\Program Files\ZZEarth\ZFGK.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="ZFGK.WinForms.DvExprss">
-      <HintPath>C:\Program Files\ZZEarth\ZFGK.WinForms.DvExprss.dll</HintPath>
+    <Reference Include="ZFGK.DvExprss">
+      <HintPath>C:\Program Files\ZZEarth\ZFGK.DvExprss.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="ZfPlatform.GUI">
-      <HintPath>C:\Program Files\ZZEarth\ZfPlatform.GUI.dll</HintPath>
+    <Reference Include="ZFGK.osgEarth.PlatformGUI">
+      <HintPath>C:\Program Files\ZZEarth\ZFGK.osgEarth.PlatformGUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ZfPlatform.Base">
+      <HintPath>C:\Program Files\ZZEarth\ZfPlatform.Base.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ZfPlatform.DevExpressGUI">
+      <HintPath>C:\Program Files\ZZEarth\ZfPlatform.DevExpressGUI.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>

@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraBars.Ribbon;
-using Zf3DPlatform.osgEarthGUI;
-using ZfPlatform.GUI;
 using ZFGK.AddinServices;
-using ZFGK.WinForms.DvExprss.Utility;
+using ZFGK.DvExprss.Utility;
+using ZfPlatform.DevExpressGUI;
 
 namespace ZZEarth_Example
 {
@@ -16,16 +9,10 @@ namespace ZZEarth_Example
     {
         public bool StartUp()
         {
-            var mainRibbonForm = MainRibbonForm.GetInstance();
-            mainRibbonForm.Load += delegate(object sender, EventArgs args)
-            {
-                var osgEarthForm = mainRibbonForm.MdiChildren.Where(d => d is OsgEarthForm).Select(d => d as OsgEarthForm).First();
-                osgEarthForm.ribbonControl.Page("第一个APP").Group("测试").ItemLinks.NewButton("第一个命令", btn => btn.SetTag(typeof(TestCmd)));
-
-                // 必须重新合并Ribbbon才能有效
-                mainRibbonForm.ribbonControl.UnMergeRibbon();
-                mainRibbonForm.ribbonControl.MergeRibbon(osgEarthForm.ribbonControl);
-            };
+            var mainRibbonForm = MainRibbonForm.Instance;
+            mainRibbonForm.RegisterCmd<TestCmd>("test");
+            mainRibbonForm.ribbonControl.Page("第一个APP").Group("测试")
+                .ItemLinks.NewButton("第一个命令", btn => btn.SetTag("test"));
             return true;
         }
     }
