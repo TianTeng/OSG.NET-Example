@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4F9A0373-80DC-4333-A7B9-9B1BD880867A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OSS_Example</RootNamespace>
+    <AssemblyName>OSS_Example</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\ZZEarth\DevExpress.Data.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\ZZEarth\DevExpress.Utils.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\ZZEarth\DevExpress.XtraBars.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\ZZEarth\DevExpress.XtraEditors.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZFGK">
+      <HintPath>C:\Program Files\OpenSceneStudio\ZFGK.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ZFGK.DevExprss">
+      <HintPath>C:\Program Files\OpenSceneStudio\ZFGK.DevExprss.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ZFGK.OSG">
+      <HintPath>C:\Program Files\OpenSceneStudio\ZFGK.OSG.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ZFGK.OSG.UI">
+      <HintPath>C:\Program Files\OpenSceneStudio\ZFGK.OSG.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ZFGK.osgEarth">
+      <HintPath>C:\Program Files\OpenSceneStudio\ZFGK.osgEarth.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ZFGK.osgEarth.UI">
+      <HintPath>C:\Program Files\OpenSceneStudio\ZFGK.osgEarth.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ZFGK.osgEarth.Web">
+      <HintPath>C:\Program Files\OpenSceneStudio\ZFGK.osgEarth.Web.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ZFGK.WinForms">
+      <HintPath>C:\Program Files\OpenSceneStudio\ZFGK.WinForms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ZfOsgEarthWraper">
+      <HintPath>C:\Program Files\OpenSceneStudio\ZfOsgEarthWraper.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ZfOsgWraper">
+      <HintPath>C:\Program Files\OpenSceneStudio\ZfOsgWraper.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ZfPlatform.Base">
+      <HintPath>C:\Program Files\OpenSceneStudio\ZfPlatform.Base.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ZfPlatform.DevExpressGUI">
+      <HintPath>C:\Program Files\OpenSceneStudio\ZfPlatform.DevExpressGUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cmds\FirstCmd.cs" />
+    <Compile Include="TestApp.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
