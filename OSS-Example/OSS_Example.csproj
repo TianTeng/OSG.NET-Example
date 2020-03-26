@@ -59,6 +59,10 @@
       <HintPath>C:\Program Files\OpenSceneStudio\ZFGK.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="ZFGK.Actions">
+      <HintPath>C:\Program Files\OpenSceneStudio\ZFGK.Actions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="ZFGK.DevExprss">
       <HintPath>C:\Program Files\OpenSceneStudio\ZFGK.DevExprss.dll</HintPath>
       <Private>False</Private>
@@ -105,6 +109,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cmds\Base\LaodModelCmd.cs" />
     <Compile Include="Cmds\FirstCmd.cs" />
     <Compile Include="TestApp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

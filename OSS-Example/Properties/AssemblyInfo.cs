@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("OSS_Example")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("北京智帆高科科技邮箱公司")]
+[assembly: AssemblyCompany("北京智帆高科科技有限公司")]
 [assembly: AssemblyProduct("OSS_Example")]
-[assembly: AssemblyCopyright("Copyright © 北京智帆高科科技邮箱公司 2018")]
+[assembly: AssemblyCopyright("Copyright © 北京智帆高科科技有限公司 2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
