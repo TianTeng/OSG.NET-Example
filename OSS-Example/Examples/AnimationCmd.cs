@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 using Osg;
 using OsgAnimation;
 using ZFGK.Addins;
@@ -8,9 +9,14 @@ namespace OSS_Example.Examples
 {
     public class AnimationCmd : IExtendCommand
     {
-        public CmdResult Execute(ExtendCmdData data, ref string message)
+        public CmdResult Execute(ExtendCmdData cmdData, ref string message)
         {
-            var osgViewSimpleForm = data.ViewForm as OsgViewSimpleForm;
+            var mainForm = cmdData.MainForm as Form;
+            var viewForm = cmdData.ViewForm as IViewForm;
+            if (viewForm == null)
+                return CmdResult.Cancel;
+            var osgView = viewForm.View as ZfOsgViewCtrl;
+            var osgObj = osgView.OsgObj;
 
             var geode = new Geode();
             geode.addDrawable(new ShapeDrawable(new Box(new Vec3f(0, 0, 0), 0.5f)));
@@ -70,8 +76,8 @@ namespace OSS_Example.Examples
             mng.playAnimation(anim1);
             mng.playAnimation(anim2);
 
-            osgViewSimpleForm.OsgViewCtrl.OsgObj.AddOrReplaceModel("Models", grp);
-            osgViewSimpleForm.OsgViewCtrl.OsgObj.SetView(ViewMode.ShowAll);
+            osgObj.AddOrReplaceModel("Models", grp);
+            osgObj.SetView(ViewMode.ShowAll);
 
             return CmdResult.Succeed;
         }

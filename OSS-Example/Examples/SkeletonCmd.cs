@@ -1,4 +1,5 @@
-﻿using Osg;
+﻿using System.Windows.Forms;
+using Osg;
 using OsgAnimation;
 using ZFGK.Addins;
 using ZFGK.OSG.UI;
@@ -9,9 +10,15 @@ namespace OSS_Example.Examples
 {
     class SkeletonCmd : IExtendCommand
     {
-        public CmdResult Execute(ExtendCmdData data, ref string message)
+        public CmdResult Execute(ExtendCmdData cmdData, ref string message)
         {
-            var osgViewSimpleForm = data.ViewForm as OsgViewSimpleForm;
+            var mainForm = cmdData.MainForm as Form;
+            var viewForm = cmdData.ViewForm as IViewForm;
+            if (viewForm == null)
+                return CmdResult.Cancel;
+            var osgView = viewForm.View as ZfOsgViewCtrl;
+            var osgObj = osgView.OsgObj;
+
             var skelroot = new Skeleton(); // 骨骼动画
             skelroot.setDefaultUpdateCallback();
             var root = new Bone(); // 骨骼
@@ -104,8 +111,8 @@ namespace OSS_Example.Examples
             initVertexMap(root, right0, right1, geom, src);
 
             scene.Name = "1";
-            osgViewSimpleForm.OsgViewCtrl.OsgObj.AddOrReplaceModel("Models", scene);
-            osgViewSimpleForm.OsgViewCtrl.OsgObj.SetView(ViewMode.ShowAll);
+            osgObj.AddOrReplaceModel("Models", scene);
+            osgObj.SetView(ViewMode.ShowAll);
 
             return CmdResult.Succeed;
         }

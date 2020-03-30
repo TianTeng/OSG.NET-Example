@@ -48,11 +48,11 @@ namespace OSS_Example
 
             addinService.RegisterCmd<SequenceCmd>();
             addinService.RegisterCmd<AnimationCmd>();
-            addinService.RegisterCmd<LaodModelCmd>();
+            addinService.RegisterCmd<SkeletonCmd>();
             mainRibbonForm.ribbonControl.Page("例子").Group("动画").ItemLinks
                 .NewButton("队列", btn => btn.Tag = "Sequence")
-                .NewButton("关键帧", btn => btn.Tag = "AnimationCmd")
-                .NewButton("骨骼", btn => btn.Tag = "SkeletonCmd");
+                .NewButton("关键帧", btn => btn.Tag = "Animation")
+                .NewButton("骨骼", btn => btn.Tag = "Skeleton");
             return true;
         }
     }

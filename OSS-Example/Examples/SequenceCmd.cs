@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 using Osg;
 using ZFGK.Addins;
 using ZFGK.OSG.UI;
@@ -8,9 +9,14 @@ namespace OSS_Example.Examples
 {
     class SequenceCmd : IExtendCommand
     {
-        public CmdResult Execute(ExtendCmdData data, ref string message)
+        public CmdResult Execute(ExtendCmdData cmdData, ref string message)
         {
-            var osgViewSimpleForm = data.ViewForm as OsgViewSimpleForm;
+            var mainForm = cmdData.MainForm as Form;
+            var viewForm = cmdData.ViewForm as IViewForm;
+            if (viewForm == null)
+                return CmdResult.Cancel;
+            var osgView = viewForm.View as ZfOsgViewCtrl;
+            var osgObj = osgView.OsgObj;
 
             // 读取模型
             string osgFileName;
@@ -34,7 +40,7 @@ namespace OSS_Example.Examples
             sequence.setLoopMode(Sequence.LoopMode.LOOP);
             sequence.setMode(Sequence.SequenceMode.START);
             sequence.Name = "sequence";
-            osgViewSimpleForm.OsgViewCtrl.OsgObj.AddOrReplaceModel("Models", sequence);
+            osgObj.AddOrReplaceModel("Models", sequence);
 
             return CmdResult.Succeed;
         }

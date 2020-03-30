@@ -58,6 +58,8 @@ namespace OSS_Example.Cmds.Base
                     // 使用[分组]-[模型]，的方式组织模型树，模型Name为Key，即如果添加相同名称的模型，原来的模型会删除
                     node.Name = Path.GetFileNameWithoutExtension(osgFileName);
                     osgObj.AddOrReplaceModel("Models", node);
+
+                    osgObj.SetView(ViewMode.ShowAll);//显示全图
                 }
                 else
                 {
