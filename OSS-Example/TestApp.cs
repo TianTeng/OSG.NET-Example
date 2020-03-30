@@ -13,6 +13,7 @@
 // ***********************************************************************
 using OSS_Example.Cmds;
 using OSS_Example.Cmds.Base;
+using OSS_Example.Examples;
 using ZFGK.Addins;
 using ZFGK.DevExprss.Utility;
 using ZfPlatform.DevExpressGUI;
@@ -44,6 +45,14 @@ namespace OSS_Example
                 .ItemLinks.NewButton("第一个命令", btn => btn.Tag = "First");
             mainRibbonForm.ribbonControl.Page("第一个APP").Group("模型")
                 .ItemLinks.NewButton("载入模型", btn => btn.Tag = "LaodModel");
+
+            addinService.RegisterCmd<SequenceCmd>();
+            addinService.RegisterCmd<AnimationCmd>();
+            addinService.RegisterCmd<LaodModelCmd>();
+            mainRibbonForm.ribbonControl.Page("例子").Group("动画").ItemLinks
+                .NewButton("队列", btn => btn.Tag = "Sequence")
+                .NewButton("关键帧", btn => btn.Tag = "AnimationCmd")
+                .NewButton("骨骼", btn => btn.Tag = "SkeletonCmd");
             return true;
         }
     }
