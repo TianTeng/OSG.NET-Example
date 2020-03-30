@@ -6,7 +6,7 @@ using ZFGK.OSG.UI;
 
 namespace OSS_Example.Examples
 {
-    class AnimationCmd : IExtendCommand
+    public class AnimationCmd : IExtendCommand
     {
         public CmdResult Execute(ExtendCmdData data, ref string message)
         {
