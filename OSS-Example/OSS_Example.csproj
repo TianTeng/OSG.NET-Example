@@ -49,6 +49,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -116,8 +117,27 @@
     <Compile Include="Examples\SkeletonCmd.cs" />
     <Compile Include="TestApp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\ZfEarthTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ZfEarthTestForm.Designer.cs">
+      <DependentUpon>ZfEarthTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ZfOsgViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ZfOsgViewForm.designer.cs">
+      <DependentUpon>ZfOsgViewForm.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="UI\ZfEarthTestForm.resx">
+      <DependentUpon>ZfEarthTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ZfOsgViewForm.resx">
+      <DependentUpon>ZfOsgViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
